@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: chanchanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chanchanpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: chanchanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: chanchanpipelinesjavascriptdocker 
+          image: ccmycontainerregistry.azurecr.io/chanchanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
